@@ -3,6 +3,7 @@
 import { Box } from '@c/box';
 import { Button } from '@c/button';
 import { Chevron } from '@c/chevron';
+import { Panel } from '@c/panel';
 import * as S from './background.style'
 import type * as T from './background.type'
 
