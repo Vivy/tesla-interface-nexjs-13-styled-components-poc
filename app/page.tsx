@@ -1,4 +1,4 @@
-import { Box } from '../component';
+import { Box, Background } from '../component';
 
 interface TeslaSection {
   who: string;
@@ -30,8 +30,14 @@ const Home = async () => {
       <p>This is the page for your domaine</p>
 
       <ul>
-        {list.map((item) => (
-          <li key={item.id}>{item.who}</li>
+        {list.map((item, key) => (
+          <Background
+            section={item}
+            key={item.id}
+            goTo={list[key < list.length - 1 ? key + 1 : 0].id}
+          >
+            {item.who}
+          </Background>
         ))}
       </ul>
     </Box>

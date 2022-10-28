@@ -1,5 +1,5 @@
 import { Suspense } from 'react';
-import { ErrorBoundary } from '../component';
+import { ErrorBoundary, Global, Theme } from '../component';
 import RootStyleRegistry from './root-style';
 
 interface IAppBase {
@@ -19,8 +19,11 @@ const AppBase = ({ children }: IAppBase) => (
     </head>
 
     <body>
+      <Global font='Roboto' />
       <ErrorBoundary>
-        <RootStyleRegistry>{children}</RootStyleRegistry>
+        <RootStyleRegistry>
+          <Theme>{children}</Theme>
+        </RootStyleRegistry>
       </ErrorBoundary>
     </body>
   </html>
