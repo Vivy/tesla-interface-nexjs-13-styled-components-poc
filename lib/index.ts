@@ -1,1 +1,1 @@
-export { useStyledComponentsRegistry } from './style'
+export { useStyledComponentsRegistry } from './style';

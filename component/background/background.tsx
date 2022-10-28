@@ -1,6 +1,8 @@
 'use client';
 
-import { Box, Button, Chevron, Panel } from '..'
+import { Box } from '@c/box';
+import { Button } from '@c/button';
+import { Chevron } from '@c/chevron';
 import * as S from './background.style'
 import type * as T from './background.type'
 
