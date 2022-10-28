@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import * as T from './background.type'
 
-export const background = styled.div<T.StyledBackground>`
+export const Background = styled.div<T.StyledBackground>`
   height: 100vh;
   width: 100vw;
   padding: 2rem;
