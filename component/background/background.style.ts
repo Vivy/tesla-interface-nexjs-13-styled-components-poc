@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import * as T from './background.type'
+import * as T from './background.type';
 
 export const Background = styled.div<T.StyledBackground>`
   height: 100vh;
@@ -12,11 +12,11 @@ export const Background = styled.div<T.StyledBackground>`
   justify-content: space-between;
   align-items: center;
 
-  background-image: url(/image/background/${({ id })=> id}-mobile.jpg);
+  background-image: url(/image/background/${({ id }) => id}-mobile.jpg);
   background-size: cover;
   background-position: center;
 
   @media screen and (min-width: 768px) {
-    background-image: url(/image/background/${({ id })=> id}.jpg);
+    background-image: url(/image/background/${({ id }) => id}.jpg);
   }
-`
+`;

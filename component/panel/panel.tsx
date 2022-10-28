@@ -9,6 +9,7 @@ const Panel = ({ title, link, text, id }: T.Panel) => (
     <Text isTitle as='h1' fullWidth>
       {title}
     </Text>
+
     {text && (
       <Text as='p' fullWidth={!link}>
         {text}

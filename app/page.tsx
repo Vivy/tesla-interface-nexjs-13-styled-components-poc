@@ -1,5 +1,4 @@
 import { Background } from '@c/background';
-import { Box } from '@c/box';
 
 interface TeslaSection {
   who: string;
