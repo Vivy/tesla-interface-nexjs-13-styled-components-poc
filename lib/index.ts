@@ -1,0 +1,1 @@
+export { useStyledComponentsRegistry } from './style'
