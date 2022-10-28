@@ -11,11 +11,7 @@ const RootStyleRegistry = ({ children }: { children: JSX.Element }) => {
     return <>{styledComponentsFlushEffect()}</>;
   });
 
-  return (
-    <StyledComponentsRegistry data-testid='test'>
-      {children}
-    </StyledComponentsRegistry>
-  );
+  return <StyledComponentsRegistry>{children}</StyledComponentsRegistry>;
 };
 
 export default RootStyleRegistry;

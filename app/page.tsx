@@ -1,3 +1,5 @@
+import { Box } from '../component';
+
 interface TeslaSection {
   who: string;
   text: string;
@@ -23,15 +25,16 @@ const getTeslaInfo = async () => {
 const Home = async () => {
   const list = await getTeslaInfo();
   return (
-    <div>
-      <h1>Home page </h1>
+    <Box gap='large'>
+      <h1>Home page</h1>
       <p>This is the page for your domaine</p>
+
       <ul>
         {list.map((item) => (
           <li key={item.id}>{item.who}</li>
         ))}
       </ul>
-    </div>
+    </Box>
   );
 };
 

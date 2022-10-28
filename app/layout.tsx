@@ -1,18 +1,32 @@
-import type { Suspense } from 'react';
-import { ErrorBoundry } from '../componenet';
-import ErrorPage from './error';
-import PageIsLoading from './loading';
+import { Suspense } from 'react';
+import { ErrorBoundary } from '../component';
 import RootStyleRegistry from './root-style';
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html>
-      <head></head>
-      <body>{children}</body>
-    </html>
-  );
+interface IAppBase {
+  children: JSX.Element;
 }
+
+const AppBase = ({ children }: IAppBase) => (
+  <html>
+    <head>
+      <title>Tesla UI With NextJS 13</title>
+      <meta
+        name='description'
+        content='Building a UI for Tesla Motors with NextJS 13'
+      />
+      <meta name='viewport' content='width=device=width, initial-scale=1.0' />
+      <meta httpEquiv='Content-Type' content='text/html;charset=UTF-8' />
+    </head>
+
+    <body>
+      <RootStyleRegistry>{children}</RootStyleRegistry>
+      {/* {children}
+      <ErrorBoundary>
+        <Suspense fallback={<PageIsLoading />}>
+        </Suspense>
+      </ErrorBoundary> */}
+    </body>
+  </html>
+);
+
+export default AppBase;
