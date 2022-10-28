@@ -19,12 +19,9 @@ const AppBase = ({ children }: IAppBase) => (
     </head>
 
     <body>
-      <RootStyleRegistry>{children}</RootStyleRegistry>
-      {/* {children}
       <ErrorBoundary>
-        <Suspense fallback={<PageIsLoading />}>
-        </Suspense>
-      </ErrorBoundary> */}
+        <RootStyleRegistry>{children}</RootStyleRegistry>
+      </ErrorBoundary>
     </body>
   </html>
 );
