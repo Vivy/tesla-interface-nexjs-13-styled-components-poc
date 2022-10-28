@@ -1,5 +1,3 @@
-// import { Box, Background } from '../component';
-
 import { Background } from '@c/background';
 import { Box } from '@c/box';
 
@@ -28,22 +26,17 @@ const getTeslaInfo = async () => {
 const Home = async () => {
   const list = await getTeslaInfo();
   return (
-    <Box gap='large'>
-      <h1>Home page</h1>
-      <p>This is the page for your domaine</p>
-
-      <ul>
-        {list.map((item, key) => (
-          <Background
-            section={item}
-            key={item.id}
-            goTo={list[key < list.length - 1 ? key + 1 : 0].id}
-          >
-            {item.who}
-          </Background>
-        ))}
-      </ul>
-    </Box>
+    <>
+      {list.map((item, key) => (
+        <Background
+          section={item}
+          key={item.id}
+          goTo={list[key < list.length - 1 ? key + 1 : 0].id}
+        >
+          {item.who}
+        </Background>
+      ))}
+    </>
   );
 };
 

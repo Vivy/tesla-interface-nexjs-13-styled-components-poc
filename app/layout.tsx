@@ -1,4 +1,5 @@
-import { Suspense } from 'react';
+'use client ';
+
 import { ErrorBoundary, Global, Theme } from '../component';
 import RootStyleRegistry from './root-style';
 
